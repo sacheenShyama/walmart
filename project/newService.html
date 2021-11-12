@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ef15a76fa0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      #serviceContainer {
+        /* display: none; */
+        width: 450px;
+        display: flex;
+        gap: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        line-height: 18px;
+      }
+      #column1 , #column2,#column3 {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        visibility: hidden;
+      }
+
+      button{
+          border-radius: 40px;
+          border: 1px  solid black;
+          padding: 6px;
+          width: 110px;
+          background-color: white;
+      }
+      #above{
+        width: 80px;
+        border: none;
+        background-color: #0071dc;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 5px;
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <button id="above"><i class="fas fa-th-large"></i>Service</button>
+    <div id="serviceContainer">
+      <div id="column1">
+        <h3>All Services</h3>
+        <p id="autoCareServices">Auto Care Center Services</p>
+        <p id="health">Health Services</p>
+        <p id="registry">Registry,Lists & Gifts</p>
+        <p id="custom">Custom Cakes</p>
+        <p id="photo">Photo Services</p>
+        <p id="financial">Financial Services</p>
+        <p id="get">Get Inspired</p>
+      </div>
+      <div id="column2">
+        <p id="autoService">Auto Care Center Services</p>
+        <p>Auto Buying</p>
+        <p>Find An Auto Care Center</p>
+      </div>
+      <div id="column3">
+        <img
+          src="https://i5.walmartimages.com/dfw/4ff9c6c9-aca5/k2-_b8c562b4-1164-4243-a1bb-5553e744ad41.v1.jpg?odnHeight=142px&odnWidth=142px&odnBg=FFFFFF"
+          alt="image"
+        />
+        <h3>Auto Care Centers</h3>
+        <p>See services offered & find a center.</p>
+        <button>Learn more</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var column1 = document.getElementById("column1");
+  var column2 = document.getElementById("column2");
+  var column3 = document.getElementById("column3");
+
+  document.getElementById("above").addEventListener("click", function () {
+    console.log("here");
+    column1.style.visibility = "visible";
+  });
+
+  var autoCareServices = document.getElementById("autoCareServices");
+  autoCareServices.addEventListener("click", function () {
+    autoCareServices.style.backgroundColor="rgb(193, 223, 235)"
+
+    column2.style.visibility = "visible";
+    column2.style.backgroundColor="rgb(193, 223, 235)"
+
+    column3.style.visibility = "visible";
+
+    var autoService=document.getElementById('autoService')
+autoService.addEventListener('click', function(){
+    window.location.href="AutoCenter.html"
+})
+  });
+
+
+</script>
