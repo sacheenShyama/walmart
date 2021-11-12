@@ -1,0 +1,149 @@
+#navbar {
+    height: 50px;
+    margin-top: -10px;
+    padding-top: 30px;
+    display: flex;
+    background-color: #0071dc;
+    margin-left: -10px;
+  }
+  #navbar > ul {
+    background-color: #0071dc;
+    height: -10px;
+    margin:20px 10px 10px 10px;
+  }
+  #navbar ul {
+    list-style:none;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    text-decoration: none;
+  }
+  #navbar ul .icons {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0 15px;
+  }
+  #navbar ul .icons:hover {
+      padding: 12px;
+      border-radius:50px ;
+      background-color:#004f9a;
+  }
+  #navbar ul li {
+    float: left;
+    position: relative;
+    margin-right: 25px;
+  
+  }
+  #navbar > ul ul {
+    position: absolute;
+    background-color:white;
+    color:black;
+    width: 150px;
+    top: 100%;
+    left: 0;
+    display: none;
+    border-radius: 10px;
+  }
+  #navbar ul ul li {
+    float: none;
+    width: 150px;
+  }
+  
+  /* Hover */
+  #navbar ul li:hover > ul {
+    display: block;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 150px;
+    height: auto;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .icon-tags > #depart :hover {
+      border: 1px solid grey;
+      border-radius:10px ;
+  }
+  
+  #searchbox {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    width: auto;
+    height: 38px;
+  }
+  #searchbox > a input {
+      margin-left: 20px ;
+      width: 93%;
+      border: 1px solid white;
+      padding: 10px;
+  }
+  
+  .options > li a {
+      text-decoration: none;
+      font-size: 17px;
+      line-height: 4ch;
+      color: black;
+      margin-bottom: 30px ;
+  }
+  #slideBox > li > a {
+      border: 1px solid red;
+      line-height: 4ch;
+  }
+  #slideBox > li {
+   min-width: 140px;
+  }
+  #slideBox {
+      padding: 15px;
+      width: auto;
+      text-align:center ;
+  }
+  #searchicon {
+    background-color: #ffc220;
+    color: black;
+    padding: 7px;
+    border-radius: 50%;
+    margin: 5px 5px 5px 35px;
+  }
+  #accounts {
+    font-size: 10px;
+  }
+  #belownav {
+    height: 30px;
+    color: white;
+    display: flex;
+    margin-top: -10px;
+    padding-top: 18px;
+    background-color: #004f9a;
+    margin-left: -10px;
+  }
+  #belownav div {
+    text-decoration: underline;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  #cart {
+    margin-left: 30px;
+  }
+  .sign {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .in {
+    border-radius: 20px;
+    padding: 3px ;
+    border: 1px solid blue;
+  }
+  .up {
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 15px;
+  }
+  #icon {
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0 15px;
+  }
