@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ef15a76fa0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      #container {
+        width: 540px;
+        display: inline-block;
+      }
+      .para {
+        font-size: 15px;
+      }
+      #service {
+        width: 80px;
+        border: none;
+        background-color: #0071dc;
+        border-radius: 20px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        padding: 5px;
+        color: white;
+      }
+      #service:hover {
+        background-color: #004f9a;
+      }
+      .para:hover {
+        background-color: rgb(193, 223, 235);
+      }
+      /* #autoService {
+        width: 150px;
+        background-color: whitesmoke;
+        margin-left: 200px;
+        text-align: center;
+      } */
+      /* .insideAutoCare { */
+        /* font-size: 15px; */
+      /* } */
+      .insideAutoCare:hover { 
+        text-decoration: underline;
+      }
+      tbody > tr {
+        height: 30px;
+        text-align: center;
+      }
+      #container > div {
+        display: inline-block;
+      }
+      #table1 {
+        width: 164px;
+        vertical-align: top;
+        height: 320px;
+      }
+      #table2 {
+        width: 150px;
+        vertical-align: top;
+        margin-top: 30px;
+        height: 290px;
+      }
+      #table3 {
+        width: 160px;
+        vertical-align: top;
+        margin-top: 30px;
+        margin-left: 30px;
+      }
+      .t3 {
+        margin-left: 10px;
+      }
+      #table3 > button {
+        width: 80%;
+        background-color: white;
+        border: 0.1px solid black;
+        border-radius: 20px;
+        padding: 5px;
+      }
+      #table3 > img {
+        margin-bottom: 0px;
+      }
+      #table3 > h3 {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+      }
+      #table3 > p {
+        margin-top: 10px;
+      }
+      .fas{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="table1">
+        <table>
+          <thead>
+            <button id="service"><i class="fas fa-th-large"></i>Service</button>
+          </thead>
+          <tbody id="tbody1"></tbody>
+        </table>
+      </div>
+      <div id="table2">
+        <table>
+          <thead></thead>
+          <tbody id="tbody2"></tbody>
+        </table>
+      </div>
+      <div id="table3"></div>
+    </div>
+  </body>
+</html>
+
+<!-- <script src="service.js" src="autoCareCenter.js"></script> -->
+<script>
+  document.getElementById("service").addEventListener("mouseover", hovering);
+  var tbody1 = document.getElementById("tbody1");
+
+
+  //Hovering on the first Column
+  function hovering() {
+
+    document.getElementById("tbody1").innerHTML = "";
+
+
+    var services = document.createElement("tr");
+    services.setAttribute("id", "allServices");
+    services.textContent = "All Services";
+
+    var autoCare = document.createElement("tr");
+    autoCare.setAttribute("id", "autoCare");
+    autoCare.textContent = "Auto Care Center Services";
+    autoCare.setAttribute("class", "para");
+
+    var health = document.createElement("tr");
+    health.setAttribute("id", "health");
+    health.textContent = "Health Services";
+    health.setAttribute("class", "para");
+
+    var registry = document.createElement("tr");
+    registry.setAttribute("id", "registry");
+    registry.textContent = "Registry, List & Gifts";
+    registry.setAttribute("class", "para");
+
+    var custom = document.createElement("tr");
+    custom.setAttribute("id", "custom");
+    custom.textContent = "Custom Services";
+    custom.setAttribute("class", "para");
+
+    var photo = document.createElement("tr");
+    photo.setAttribute("id", "photo");
+    photo.textContent = "Photo Services";
+    photo.setAttribute("class", "para");
+
+    var financial = document.createElement("tr");
+    financial.setAttribute("id", "financial");
+    financial.textContent = "Financial Services";
+    financial.setAttribute("class", "para");
+
+    var inspired = document.createElement("tr");
+    inspired.setAttribute("id", "financial");
+    inspired.textContent = "Get Inspired";
+    inspired.setAttribute("class", "para");
+
+
+    //Appending all the element in first column
+    tbody1.append(
+      services,
+      autoCare,
+      health,
+      registry,
+      custom,
+      photo,
+      financial,
+      inspired
+    );
+
+
+    //creating a function if the mouse leave the container
+    document
+      .getElementById("container")
+      .addEventListener("mouseleave", function () {
+        document.getElementById("tbody1").innerHTML = "";
+      });
+
+    var tbody2 = document.getElementById("tbody2");
+
+    var table3 = document.getElementById("table3");
+
+
+    // creating the function on hovering the mouse on the element of the first column
+    document
+      .getElementById("autoCare")
+      .addEventListener("mouseover", function () {
+
+        tbody2.innerHTML="";
+        table3.innerHTML="";
+        table2.style.backgroundColor=""
+
+        var autoCareServices = document.createElement("tr");
+        autoCareServices.setAttribute("id", "autoCareServices");
+        autoCareServices.textContent = "Auto Care Center Services";
+        autoCareServices.setAttribute("class", "insideAutoCare");
+
+
+        var autoBuying = document.createElement("tr");
+        autoBuying.setAttribute("id", "autoBuying");
+        autoBuying.textContent = "Auto Buying";
+        autoBuying.setAttribute("class", "insideAutoCare");
+
+        var find = document.createElement("tr");
+        find.setAttribute("id", "find");
+        find.textContent = "Find an Auto Care Center";
+        find.setAttribute("class", "insideAutoCare");
+
+        var img = document.createElement("img");
+        img.setAttribute(
+          "src",
+          "https://i5.walmartimages.com/dfw/4ff9c6c9-aca5/k2-_b8c562b4-1164-4243-a1bb-5553e744ad41.v1.jpg?odnHeight=142px&odnWidth=142px&odnBg=FFFFFF"
+        );
+        img.setAttribute("class", "t3");
+
+        var h3 = document.createElement("h3");
+        h3.textContent = "Auto Care Centers";
+        h3.setAttribute("class", "t3");
+
+        var p = document.createElement("p");
+        p.textContent = "See services offered & find a center.";
+        p.setAttribute("class", "t3");
+
+        var learnMore = document.createElement("button");
+        learnMore.textContent = "Learn More";
+        learnMore.setAttribute("class", "t3");
+
+
+        // appending all the element on the second column
+        tbody2.append(autoCareServices, autoBuying, find);
+
+        document.getElementById('autoCareServices').addEventListener("click",function(){
+          window.location.href="autoCenter.html"
+        })
+
+        document.getElementById("table2").style.backgroundColor =
+          "rgb(193, 223, 235)";
+
+
+          // appending all the element on the third column
+        table3.append(img, h3, p, learnMore);
+
+        
+        // created a function if mouse leave the container for second column element 
+
+      });
+    document
+      .getElementById("container")
+      .addEventListener("mouseleave", function () {
+        tbody2.innerHTML="";
+        table3.innerHTML="";
+        table2.style.backgroundColor=""
+      });
+  }
+
+  // created a function when autoCareServices is clicked 
+ 
+  // function onOther(){
+  //   console.log ('here')
+  //   document.getElementById('autoCareServices').style.backgroundColor='red'
+  // }
+</script>
