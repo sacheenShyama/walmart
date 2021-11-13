@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      #serviceContainer {
+        width: 90%;
+        margin: auto;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+      }
+      #imgDiv {
+        width: 100%;
+        margin: auto;
+        /* font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif; */
+      }
+      #imgDiv > img {
+        width: 100%;
+        margin-top: 100px;
+      }
+      #text {
+        text-align: center;
+        margin-top: -350px;
+        /* font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif; */
+      }
+      #text > button {
+        border-radius: 20px;
+        padding: 10px;
+        width: 160px;
+        border: 0.5px solid black;
+        background-color: #d1ecf5;
+        /* font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif; */
+        font-weight: bold;
+      }
+
+      #AutoCenterContainer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: auto;
+
+        gap: 40px;
+      }
+      .card {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        border-radius: 10px;
+      }
+      .heading {
+        margin-top: 200px;
+      }
+      .learnMore {
+        padding: 10px;
+        border-radius: 20px;
+        width: 150px;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: white;
+      }
+      .card > img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .card > h3,
+      p,
+      button {
+        margin-left: 10px;
+      }
+      .card > p {
+        font-size: 16px;
+      }
+      .card > button {
+        margin-bottom: 20px;
+      }
+      .logo{
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          text-align: center;
+      }
+      #serviceFooter{
+          background-color: #e6f1fc;
+          text-align: center;
+          font-family: "Montserrat", sans-serif;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        height: 150px;
+      }
+      
+      #serviceFooter>button{
+          border-radius: 20px;
+          background-color: white;
+          padding: 10px;
+          width: 150px;
+          border: 1px solid black;
+          font-weight: bolder;
+          font-size: 15px;
+      }
+      #serviceFooter>p{
+          font-weight: bold;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      .learnMore:hover{
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- container for service part -->
+    <div id="serviceContainer">
+
+      <!-- div for the top most part -->
+      <div id="imgDiv">
+          <a href="https://www.walmart.com/store/finder?distance=50&services=tire_and_lube">
+            <img width="100%"
+            height="500px"
+            src="https://i5.walmartimages.com/dfw/4ff9c6c9-890f/k2-_ba8ceeb2-67ee-4d35-b601-4e4962a0b1cd.v1.jpg"
+            alt="image"
+          />
+          <div id="text">
+            <h1>Find Your Auto Care Center</h1>
+            <p>Buy Your tires online & make an appointment at <br />Checkout.</p>
+            <button id="topButton"> Get Started</button>
+          </div>
+          </a>
+        
+          <!-- auto Services -->
+          <a href="https://www.walmart.com/cp/auto-care-center-services/2686220">
+        <h2 class="heading">Auto Services</h2>
+      </div>
+
+      <div id="AutoCenterContainer">
+        <div class="card">
+          <img
+            src="https://i5.walmartimages.com/dfw/4ff9c6c9-16bf/k2-_813e17fa-1633-44a8-b4e6-90c007fa8ebb.v1.jpg?odnHeight=222&odnWidth=395&odnBg=FFFFFF"
+            alt="image"
+          />
+          <h3>Oil & Fluids</h3>
+          <p>Get oil changes & more, starting at $32.88.</p>
+          <button class="learnMore">Learn more</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://i5.walmartimages.com/dfw/4ff9c6c9-a431/k2-_5d01c02d-5baa-4f43-adfd-c8218599a2b2.v1.jpg?odnHeight=222&odnWidth=395&odnBg=FFFFFF"
+            alt="image"
+          />
+          <h3>Top tires</h3>
+          <p>Low prices, such as $14 per tire lifetime balance & rotation.</p>
+          <button class="learnMore">Learn more</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://i5.walmartimages.com/dfw/4ff9c6c9-7769/k2-_c278b234-e1b8-42f4-9055-adfcefccb0f6.v1.jpg?odnHeight=222&odnWidth=395&odnBg=FFFFFF"
+            alt="image"
+          />
+          <h3>Maintenance</h3>
+          <p>Find savings on car care, like free battery installation.</p>
+          <button class="learnMore">Learn more</button>
+        </div>
+      </div>
+      
+    </a>
+      <div id="logoContainer">
+
+        <!-- Shop By category Part -->
+        <h2>Shop by category</h2>
+        <div class="logo">
+          <a href="https://www.walmart.com/browse/tires/91083_1077064">
+            <div>
+              <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-11ea/k2-_77d7c9ef-f3c7-42f4-820a-b273b6764527.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Tires</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/browse/auto-tires/car-batteries/91083_1074765_1104292_5926828">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-f393/k2-_9a7e628d-b5b8-41cc-92b0-5fdec9c92af4.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Car batteries</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/browse/auto-tires/motor-oil/91083_1104294_1072084">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-778c/k2-_8367a6f2-95ba-444a-97c3-d0bef54a60d8.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Oil & fluids</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/store/finder?distance=50&services=tire_and_lube">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-8dbc/k2-_2e13796d-7a6b-485f-a5ce-acbbecca937f.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Find your auto care center</p>
+            </div>
+          </a>
+          </div>
+          <hr>
+        </div>
+
+
+        <!-- second logo -->
+        <h2>Discover  Fav Brands</h2>
+        <div class="logo">
+          <a href="https://www.walmart.com/browse/auto-tires/goodyear-tires/91083_1077064_6083160_7934877">
+            <div>
+              <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-c342/k2-_7dc08c7d-d577-46cf-8f72-cdaf907ca9b1.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Good Year</p>
+            </div>
+            </a>
+            <a href="https://www.walmart.com/browse/auto-tires/supertech-filters/91083_1074765_8697188_6869357">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-2ac7/k2-_6e254970-6483-4ea9-813e-04675e914e7c.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Super Tech</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/browse/auto-tires/mobil/91083_5584232_7095162">
+            <div>
+                <img src="https://i5.walmartimages.com/dfw/4ff9c6c9-9eb3/k2-_2193a83e-17e2-4431-9fec-9e9e5bcb91f4.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF" alt=""/>
+              <p>Mobil 1</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/browse/auto-tires/everstart/91083_5584232_8517945">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-80d4/k2-_c8a2104e-13c1-4287-83e7-4c8c7acc7354.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Even Start</p>
+            </div>
+            </a>
+          </div>
+          <hr>
+
+          <!-- Third Logo -->
+          <h2>Holiday's Savind</h2>
+        <div class="logo">
+          <a href="https://www.walmart.com/shop/deals">
+            <div>
+              <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-8e0f/k2-_032d00bf-af23-42c6-bb5a-6cdc014e2278.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Happy Holidays</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/cp/fast-easy/1574801">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-f85c/k2-_6c083df5-6eea-47a3-ae4e-6e11d13201fc.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Fast & Easy</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/shop/gift-finder">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-2ff3/k2-_89ecb2a8-643d-4ede-886e-426db7abb166.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Gift Finder</p>
+            </div>
+          </a>
+          <a href="https://www.walmart.com/cp/toy-catalog/8360617">
+            <div>
+                <img
+                src="https://i5.walmartimages.com/dfw/4ff9c6c9-2f61/k2-_9bb23fb2-f329-45df-81fe-02a123649443.v1.jpg?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                alt="image"
+              />
+              <p>Toy Catalog</p>
+            </div>
+          </a>
+          </div>
+          <hr>
+        </div>
+        </div>
+        
+      </div>
+     
+      <div id="serviceFooter">
+          <br>
+        <p>We’d love to hear what you think!</p>
+        <Button>Give feedback</Button>
+      </div>
+  </body>
+</html>
+
+<!-- <script src="AutoCenter.js"></script> -->

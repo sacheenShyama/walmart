@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+  </head>
+  <style>
+    .wrap {
+      /* text-align: center; */
+      width: 300px;
+      height: 50px;
+      margin: auto;
+      /* margin-left: 200px; */
+    }
+    #signin {
+      text-align: center;
+      display: grid;
+      /* border: 1px solid black; */
+      width: 50%;
+      margin: auto;
+      grid-gap: 10px;
+      margin: auto;
+    }
+    #div2 {
+      /* border: 1px solid black; */
+      width: 50%;
+      margin: auto;
+      /* margin: auto; */
+    }
+    #center {
+      margin-top: 10px;
+      padding: 10px;
+      width: 300px;
+      border-radius: 15px;
+      margin: auto;
+      background-color: blue;
+      color: white;
+      font-weight: bold;
+    }
+    #center1 {
+      margin-top: 10px;
+      padding: 10px;
+      width: 300px;
+      border-radius: 15px;
+      margin: auto;
+    }
+    #img {
+      height: 80px;
+      width: 80px;
+      margin: auto;
+    }
+  </style>
+
+  <body>
+    <div id="signin">
+      <img
+        id="img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdTu-N9NHet7EiJHGYsoDdezWkMyiederS3Q&usqp=CAU"
+      />
+      <h2>Sign in to your Walmart Account</h2>
+      <div>
+        <input
+          id="email"
+          class="wrap"
+          type="email"
+          placeholder="Email address"
+        />
+      </div>
+      <div>
+        <input id="pass" class="wrap" type="password" placeholder="Password" />
+      </div>
+      <div id="div2">
+        <a href=""><p>Forgot_email</p></a>
+        <div><input type="checkbox" />Keep me signed in</div>
+        <div>
+          <button id="center">Sign In</button>
+        </div>
+        <p>Don't have an account</p>
+        <div>
+          <button id="center1" onclick="createAc()">Create Account</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("button").addEventListener("click", signIn);
+  var regUsers = JSON.parse(localStorage.getItem("userData"));
+  console.log("regUsers:", regUsers);
+
+  function signIn() {
+    var email = document.querySelector("#email").value;
+    var pass = document.querySelector("#pass").value;
+
+    for (var i = 0; i < regUsers.length; i++) {
+      if (regUsers[i].emailAddress == email && regUsers[i].passWord == pass) {
+        window.location.href = "body.html";
+      }
+      //    else {
+      //     alert("wrong user id and password");
+      //   }
+    }
+  }
+  function createAc() {
+    window.location.href = "signup.html";
+  }
+</script>

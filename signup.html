@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #container {
+      /* border: 1px solid red; */
+      width: 30%;
+      height: 1000px;
+      margin: auto;
+    }
+    #container1 {
+      /* border: 1px solid red; */
+      height: 35%;
+    }
+    #container2 {
+      /* border: 1px solid red; */
+      height: 12%;
+    }
+    #container3 {
+      /* border: 1px solid red; */
+      height: 17%;
+    }
+    #container4 {
+      /* border: 1px solid red; */
+      height: 13%;
+      /* text-align: center; */
+    }
+    #id2 {
+      display: grid;
+      grid-gap: 20px;
+    }
+    .id {
+      height: 50px;
+      width: 350px;
+    }
+    #createbtn {
+      height: 40px;
+      width: 200px;
+    }
+    .id3 {
+      padding: 18px;
+      border-radius: 50px;
+      width: 360px;
+      background-color: blue;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    #cne {
+      text-align: center;
+    }
+    #img {
+      height: 80px;
+      width: 80px;
+      margin: auto;
+      text-align: center;
+      margin-left: 130px;
+    }
+    #cen {
+      text-align: center;
+      margin-right: 100px;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <img
+        id="img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdTu-N9NHet7EiJHGYsoDdezWkMyiederS3Q&usqp=CAU"
+      />
+      <div id="container1">
+        <img />
+        <h2>Create your Walmart account</h2>
+        <div id="id2">
+          <div>
+            <input id="name" class="id" type="text" placeholder="First name" />
+          </div>
+          <div class="id">
+            <input id="lname" class="id" type="text" placeholder="Last name" />
+          </div>
+          <div class="id">
+            <input
+              id="email"
+              class="id"
+              type="email"
+              placeholder="Email address"
+            />
+          </div>
+          <div class="id">
+            <input
+              id="pass"
+              class="id"
+              type="password"
+              placeholder="Creat a password"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="container2">
+        <h5>Your password must include the following:</h5>
+        <p>
+          8-100 characters:<br />
+          Upper & lowercase letters<br />
+          At least one number or special character
+        </p>
+      </div>
+
+      <div id="container3">
+        <input type="checkbox" />
+        Keep me signed in
+        <p>
+          Uncheck if using a public device
+          <a href="">More</a>
+        </p>
+        <input type="checkbox" />Send me emails about new arrivals, hot
+        items,daily<br />
+        savings, & more.
+        <p>
+          By clicking Create Account, you acknowledge you have<br />
+          read and agreed to our <a href="">Term of Use</a> and
+          <a href="">Privacy Policy</a>
+        </p>
+      </div>
+      <div id="container4">
+        <button class="id3">Create Account</button><br />
+        <p id="cen">Already have an account</p>
+        <button class="id3" onclick="signIn()">Sign in</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("button").addEventListener("click", signUp);
+  var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+
+  function signUp() {
+    var name = document.getElementById("name").value;
+    var lname = document.getElementById("lname").value;
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("pass").value;
+    // console.log(name,lname,email,pass)
+    var userCredentials = {
+      firstName: name,
+      lastName: lname,
+      emailAddress: email,
+      passWord: pass,
+    };
+    // console.log(userCredentials)
+    userArr.push(userCredentials);
+    localStorage.setItem("userData", JSON.stringify(userArr));
+    window.location.href = "Signin.html";
+  }
+  function signIn() {
+    window.location.href = "Signin.html";
+  }
+</script>
