@@ -1,0 +1,26 @@
+/* footer */
+
+#footer {
+    background-color:#1e3f7b;
+    height: 200px;
+    text-align: center;
+}
+#tags {
+    padding: 30px;
+}
+#tags > a{
+    color: white;
+    margin-top:30px ;
+    margin-left: 10px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+#footer > h5 {
+    color: whitesmoke;
+    text-align: center; 
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+}
